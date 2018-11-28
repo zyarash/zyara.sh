@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Doge In Space</title>
+         <meta name='viewport' content='width=device-width' />
+         <meta name='viewport' content='initial-scale=1, maximum-scale=1, user-scalable=no' />
+    </head>
+    <body>
+        <div id='container'>
+            <div class='link-container top'>
+                <a target='_blank'
+                   href='https://www.github.com/zyshara'
+                   class='svg-icon-background github'>
+                        <img src='{{ url_for("static", filename="img/github.svg") }}'
+                        class='svg-icon'/>
+                </a>                                                  
+                <a target='_blank'
+                   href='https://www.facebook.com/zyshara'
+                   class='svg-icon-background facebook'>
+                        <img src='{{ url_for("static", filename="img/facebook.svg") }}'
+                        class='svg-icon'/>
+                </a>
+                <a target='_blank'
+                   href='https://www.instagram.com/zyshara/'
+                   class='svg-icon-background instagram'>
+                        <img src='{{ url_for("static", filename="img/instagram.svg") }}'
+                        class='svg-icon'/>
+                </a>
+            </div>
+            <div class='content-container'>
+                {% block content %}{% endblock %}
+            </div>
+            <div class='link-container bottom'>
+                <div class='svg-icon-background question'>
+                    <img src='{{ url_for("static", filename="img/help.svg") }}'
+                    class='svg-icon'/>
+                </div>                                                  
+            </div>
+            {% include '_info.html' %}
+        </div>
+    </body>
+</html>

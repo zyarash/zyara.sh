@@ -1,0 +1,108 @@
+@import 'common';
+
+
+$link-container-height-mobile: 5vh;
+$link-container-height-desktop: 30px;
+
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100vw;
+    height: 95vh;
+    opacity: 0;
+    @include prefix(animation, fadein 2s);
+}
+
+.content-container {
+    width: 100vw;
+}
+
+.link-container {
+    display: flex;
+    width: 100vw;
+    padding: 0.5vh;
+    height: $link-container-height-desktop;
+    z-index: 1000;
+    & > * { margin: 0 0.8vh; } 
+    &.top {
+        position: fixed;
+        background-color: #FFFFFF;
+    }
+    &.bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: transparent;
+        align-self: flex-end;
+    }
+}
+
+.svg-icon {
+    width: $link-container-height-desktop;
+    height: $link-container-height-desktop;
+}
+
+.github {
+    path { fill: #181717 !important; }
+}
+
+.facebook {
+    path { fill: #3B5998 !important; }
+}
+
+.instagram {
+    path { fill: #125688 !important; }
+    circle { fill: #125688 !important; }
+}
+
+.question { 
+    margin-left: auto;
+    path { fill: #FFFFFF !important; }
+}
+
+.svg-icon-background {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: $link-container-height-desktop;
+    height: $link-container-height-desktop;
+    @include prefix(transition, opacity .4s ease-in-out);
+    &:hover { opacity: 0.6; }
+}
+
+.info-bar {
+    position: absolute;
+    z-index: 999;
+    background-color: #000000;
+    opacity: 0;
+    align-self: flex-end;
+    height: 50vh;
+    width: 25vh;
+    color: #FFFFFF;
+    padding: 20px;
+    right: 0;
+    font-family: "Comic Sans MS";
+    font-size: 12px;
+    & > a {
+        color: #b8dbfc;
+        @include prefix(transition, opacity .4s ease-in-out);
+        &:hover { color: #ffffff; opacity: 0.6; }
+        &:visited { color: #b8dbfc; }
+    }
+}
+
+@media (max-width: 768px) {
+    .link-container {
+        height: $link-container-height-mobile;
+    }
+    .svg-icon {
+        width: $link-container-height-mobile;
+        height: $link-container-height-mobile;
+    }
+    .svg-icon-background {
+        width: $link-container-height-mobile;     
+        height: $link-container-height-mobile;
+    }
+}

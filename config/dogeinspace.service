@@ -1,0 +1,13 @@
+[Unit]
+Description=Doge In Space
+After=network.target
+
+[Service]
+User=doge
+Group=www-data
+WorkingDirectory=/home/doge/dogeinspace/app
+Environment="PATH=/home/doge/dogeinspace/env/bin"
+ExecStart=/home/doge/dogeinspace/env/bin/gunicorn --workers 5 --bind unix:dogeinspace.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target

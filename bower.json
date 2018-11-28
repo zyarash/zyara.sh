@@ -1,0 +1,10 @@
+{
+  "name": "dogeinspace",
+  "homepage": "https://github.com/zyshara/dogeinspace",
+  "authors": [
+    "Jennifer Decker <hi.imma.bear@gmail.com>"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  }
+}

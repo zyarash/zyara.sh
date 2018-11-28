@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class='box wow-left'>
+        <div class="wow wow0"></div>
+        <div class="wow wow1"></div>
+        <div class="wow wow2"></div>
+        <div class="wow wow3"></div>
+        <div class="wow wow4"></div>
+    </div>
+    <div class='box doge-center'>
+        <img class='doge doge0' src='{{ url_for('static', filename='img/doge_one.png') }}'/>
+        <img class='doge doge1' src='{{ url_for('static', filename='img/doge_two.png') }}'/>
+        <img class='doge doge2' src='{{ url_for('static', filename='img/doge_three.png') }}'/>
+        <img class='doge doge3' src='{{ url_for('static', filename='img/doge_four.png') }}'/>
+    </div>
+    <div class='box wow-right'>
+        <div class="wow wow5"></div>
+        <div class="wow wow6"></div>
+        <div class="wow wow7"></div>
+        <div class="wow wow8"></div>
+        <div class="wow wow9"></div>
+    </div>
+    <div class="countmedown"></div>
+    <img src="{{ url_for('static', filename='img/initiative.png') }}" class='to-andromeda'/>
+    {% assets 'doge_css' %}
+        <link rel='stylesheet' href='{{ ASSET_URL }}'>
+    {% endassets %}
+    {% assets 'doge_js' %}
+        <script type='text/javascript' src='{{ ASSET_URL }}'></script>
+    {% endassets %}
+{% endblock %}

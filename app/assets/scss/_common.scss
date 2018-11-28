@@ -1,0 +1,38 @@
+$static-dir: 'static';
+$browser-prefixes: '-webkit-', '-moz-', '-ms-', '-o-', '';
+
+
+@mixin prefix($property, $value) {
+    @each $prefix in $browser-prefixes {
+        #{$prefix + $property}: $value;
+    }
+}
+
+@mixin keyframes($animation) {
+    @-webkit-keyframes $animation {
+        @content;
+    }
+    @-moz-keyframes $animation {
+        @content;
+    }
+    @-o-keyframes $animation {
+        @content;
+    }
+    @keyframes $animation {
+        @content;
+    }
+}
+
+@include keyframes(fadein) {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    padding:0;
+    margin:0;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+}

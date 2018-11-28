@@ -1,0 +1,6 @@
+.DS_store
+*.pyc
+env/
+app/bower_components/
+app/static/.webassets-cache/
+app/__pycache__/

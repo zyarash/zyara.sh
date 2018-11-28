@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name dogein.space www.dogein.space;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/doge/dogeinspace/app/dogeinspace.sock;
+    }
+}

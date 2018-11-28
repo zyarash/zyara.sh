@@ -1,0 +1,82 @@
+@import 'common';
+
+
+$box-height-desktop: 288px;
+$wow-height-desktop: 48px;
+$box-height-mobile: 33vh;
+
+
+#container {
+    background-image: url('img/space.jpg');
+    background-size: cover;
+}
+
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    @include prefix(user-select, none);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: $box-height-desktop;
+    height: $box-height-desktop;
+    &.wow-left { order: 1; text-align: right; }
+    &.doge-center { order: 2; }
+    &.wow-right { order: 3; text-align: left; }
+}
+
+.doge {
+    z-index: 999;
+    &.one { display: inline-block; } 
+}
+
+.wow {
+    height: $wow-height-desktop;
+    font-family: "Comic Sans MS";
+    color: #fff;
+    font-size: 24px;
+}
+
+.to-andromeda {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.countmedown {
+    position: absolute;
+    margin-top: $box-height-desktop;
+    height: 5vh;
+}
+
+.prep {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: monospace;
+    font-size: 24px;
+}
+
+.rocket {
+    z-index: 99;
+    margin-top: -6vh;
+}
+
+@media (max-width: 768px) {
+    .box {
+        &.wow-left { width: $box-height-mobile; height: $box-height-mobile; }
+        &.doge-center { width: $box-height-mobile; height: $box-height-mobile; }
+        &.wow-right { width: $box-height-mobile; height: $box-height-mobile; }
+     }
+    .wow { font-size: 2.6vh; }
+    .doge { width: $box-height-mobile; height: $box-height-mobile; }
+    .countmedown { margin-top: $box-height-mobile; }
+}
