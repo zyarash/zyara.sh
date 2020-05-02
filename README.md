@@ -1,2 +1,2 @@
 #Nothing to see here.
-[Move along.](http://dogein.space)
+[Move along.](https://zyara.sh)
