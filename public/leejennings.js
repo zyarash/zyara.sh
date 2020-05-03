@@ -50,11 +50,22 @@ $(window).on("load", function() {
     var opacity = 0;
     var leeMad = new Image();
     leeMad.src = "leemad.jpg";
+    var leeMadX = canvas.width/2 - leeMad.width/2;
+    var leeMadY = canvas.height/2 - leeMad.height/2;
+    var leeMadWidth = leeMad.width;
+    var leeMadHeight = leeMad.height;
     function okNowReallyStartTheAssChamber() {
-        context.drawImage(leeMad, canvas.width/2 - leeMad.width/2, canvas.height/2 - leeMad.height/2);
-        if (opacity < 255) {
-            opacity++;
-        }
+        context.globalAlpha = opacity;
+        context.drawImage(leeMad, leeMadX, leeMadY, leeMadWidth, leeMadHeight);
+        setTimeout(function() {
+            if (opacity < 1) {
+                opacity += 1/5000;
+                leeMadWidth += 1;
+                leeMadHeight += 1;
+                leeMadX = canvas.width/2 - leeMadWidth/2;
+                leeMadY = canvas.height/2 - leeMadHeight/2;
+            }
+        }, 5000);
         this.requestAnimationFrame(okNowReallyStartTheAssChamber);
     }
 
@@ -62,22 +73,24 @@ $(window).on("load", function() {
         $("canvas").css("background-color", "#000");
         context.fillStyle = "#000";
         context.clearRect(0, 0, canvas.width, canvas.height);
-        setTimeout(function() {
-            okNowReallyStartTheAssChamber();
-        });
+        okNowReallyStartTheAssChamber();
+        $("#perfection").get(0).play();
     }
 
     var clicked = false;
     $(document).on("click", function(event) {
+        var beans = new Audio("beans.mp3");
+        $("body").append(beans);
         context.drawImage(leeLobster, event.pageX, event.pageY)
         leeLobsters.push([event.pageX, event.pageY]);
+        beans.play();
         if (clicked == false) {
             clicked = true;
             setTimeout(function() {
                 $(document).off("mousemove");
                 $(document).off("click");
-                setTimeout(function() { startTheAssChamber(); }, 2000);
-            }, 5000);
+                setTimeout(function() { startTheAssChamber(); }, 500);
+            }, 2000);
         }
     });
 });
