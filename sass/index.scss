@@ -10,6 +10,31 @@ html, body {
 
 body {
     position: relative;
+
+    &.black > #theme-icon-container > .theme-icon {
+        border: 5px solid #fff;
+    }
+
+    &.black > #main-container > #portrait {
+        border: 5px solid #fff;
+    }
+
+    &.black > #main-container > #portfolio-container > .theme-icon {
+        border: 5px solid #fff;
+    }
+
+    &.pink > #theme-icon-container > .theme-icon {
+        border: 5px solid #81a5c2;
+    }
+
+    &.pink > #main-container > #portrait {
+        border: 5px solid #81a5c2;
+    }
+
+    &.pink > #main-container > #portfolio-container > .theme-icon {
+        border: 5px solid #81a5c2;
+    }
+
 }
 
 canvas {
@@ -17,8 +42,13 @@ canvas {
     position: absolute;
 }
 
+#lazy-loaded-images {
+    display: none;
+}
+
 #main-container {
     display: flex;
+    flex-direction: column;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -31,7 +61,6 @@ canvas {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    border: 5px solid #fff;
     background-image: url("portrait_black.png");
     background-size: cover;
 }
@@ -49,24 +78,46 @@ canvas {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 5px solid #fff;
 
     &.click {
         opacity: 0.8
     }
 
+    &:hover {
+        transform: scale(1.3);
+    }
+
     &#black {
         background-color: #000;
-        &:hover {
-            transform: scale(1.3);
-        }
     }
 
     &#pink {
-        background-color: #ff5498;
-        &:hover {
-            transform: scale(1.3);
-        }
+        background-color: #fcc5c0;
     }
+}
 
+#questionmark {
+    display: inline-flex;
+    background-image: url("questionmark.png");
+}
+
+#portfolio-container {
+    margin: 10px;
+}
+
+#akeos {
+    background-image: url("akeos.png");
+    background-repeat: no-repeat;
+    background-size: 47px auto;
+    background-position-x: -7px;
+}
+
+#leejennings {
+    background-image: url("leelobster.png");
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: 40px auto;
+    background-position: center;
+    background-position-y: 2px;
+    background-position-x: -6px;
 }
