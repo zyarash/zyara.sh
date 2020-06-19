@@ -16,7 +16,6 @@ function isMobileDevice() {
     return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 }
 
-
 $(window).on("load", function() {
     
     // Canvas variables cause I'm lazy
@@ -68,6 +67,7 @@ $(window).on("load", function() {
             $("body").addClass(this.name);
 
             $("canvas").css("background-color", this.backgroundColor);
+            $("body").css("background-color", this.backgroundColor);
             this.changePortrait();
             this.clearCanvas();
             this._preDraw();

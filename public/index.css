@@ -4,21 +4,17 @@
 
 html, body {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
+
+.theme-icon {
+  border: 5px solid #fff; }
 
 body {
   position: relative; }
-  body.black > #theme-icon-container > .theme-icon {
+  body.black > * .theme-icon, body.black > * #portrait {
     border: 5px solid #fff; }
-  body.black > #main-container > #portrait {
-    border: 5px solid #fff; }
-  body.black > #main-container > #portfolio-container > .theme-icon {
-    border: 5px solid #fff; }
-  body.pink > #theme-icon-container > .theme-icon {
-    border: 5px solid #81a5c2; }
-  body.pink > #main-container > #portrait {
-    border: 5px solid #81a5c2; }
-  body.pink > #main-container > #portfolio-container > .theme-icon {
+  body.pink > * .theme-icon, body.pink > * #portrait {
     border: 5px solid #81a5c2; }
 
 canvas {
@@ -43,7 +39,8 @@ canvas {
   height: 300px;
   border-radius: 50%;
   background-image: url("portrait_black.png");
-  background-size: cover; }
+  background-size: cover;
+  border: 5px solid #fff; }
 
 #theme-icon-container {
   display: block;

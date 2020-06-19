@@ -2,15 +2,14 @@ block variables
 doctype html
 html
     head
+        link(rel="stylesheet" href="/index.css")
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
         link(rel="shortcut icon", href="")
-        link(rel="stylesheet" href="/index.css")
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-        script(src="index.js")
         title ♡ zyarash's world! ♡
     body
-        canvas#canvas
+        canvas(id="canvas", width="5000px" height="5000px")
         #main-container
             #portrait
             #portfolio-container
@@ -23,3 +22,4 @@ html
             img(src="portrait_black.png")
             img(src="portrait_pink.png")
             img(src="leelobster.png")
+        script(src="index.js")

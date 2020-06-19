@@ -6,35 +6,23 @@
 html, body {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+.theme-icon {
+        border: 5px solid #fff;
 }
 
 body {
     position: relative;
 
-    &.black > #theme-icon-container > .theme-icon {
+    &.black > * .theme-icon, &.black > * #portrait {
         border: 5px solid #fff;
     }
 
-    &.black > #main-container > #portrait {
-        border: 5px solid #fff;
-    }
-
-    &.black > #main-container > #portfolio-container > .theme-icon {
-        border: 5px solid #fff;
-    }
-
-    &.pink > #theme-icon-container > .theme-icon {
+    &.pink > * .theme-icon, &.pink > * #portrait {
         border: 5px solid #81a5c2;
     }
-
-    &.pink > #main-container > #portrait {
-        border: 5px solid #81a5c2;
-    }
-
-    &.pink > #main-container > #portfolio-container > .theme-icon {
-        border: 5px solid #81a5c2;
-    }
-
 }
 
 canvas {
@@ -63,6 +51,7 @@ canvas {
     border-radius: 50%;
     background-image: url("portrait_black.png");
     background-size: cover;
+    border: 5px solid #fff;
 }
 
 #theme-icon-container {
