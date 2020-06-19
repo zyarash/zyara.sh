@@ -196,12 +196,16 @@ $(window).on("load", function() {
 
 
     // Handlers for clicking portfolio
-    $("#akeos").on("click", function() {
-        window.location.href = "/akeos";
+    $("#insomniaep").on("click", function() {
+        window.location.href = "/insomniaep";
     });
 
     $("#leejennings").on("click", function() {
         window.location.href = "/leejennings";
+    });
+
+    $("#leejenningsep").on("click", function() {
+        window.location.href = "/leejenningsep";
     });
 
 

@@ -73,11 +73,13 @@ canvas {
 }
 
 .theme-icon {
-    display: inline-block;
+    display: inline-flex;
     margin: 0 10px 0 10px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    justify-content: center;
+    align-items: center;
 
     &.click {
         opacity: 0.8
@@ -94,6 +96,11 @@ canvas {
     &#pink {
         background-color: #fcc5c0;
     }
+
+    & > p {
+        font-size: 1.5em;
+        user-select: none;
+    }
 }
 
 #questionmark {
@@ -105,19 +112,14 @@ canvas {
     margin: 10px;
 }
 
-#akeos {
-    background-image: url("akeos.png");
-    background-repeat: no-repeat;
-    background-size: 47px auto;
-    background-position-x: -7px;
+#insomniaep {
+    background-color: #000;
 }
 
 #leejennings {
-    background-image: url("leelobster.png");
-    background-repeat: no-repeat;
     background-color: #fff;
-    background-size: 40px auto;
-    background-position: center;
-    background-position-y: 2px;
-    background-position-x: -6px;
+}
+
+#leejenningsep {
+    background-color: #00f;
 }
