@@ -1,0 +1,145 @@
+/***
+ * Zyara's World!
+ * もしもし  ٩(♡ε♡)۶
+ * ProfilePage.css
+ */
+
+:root {
+    --profile-page-padding: 20px;
+}
+
+header.profile-page {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    padding: var(--profile-page-padding);
+    align-self: end;
+    overflow: hidden;
+    position: relative;
+    grid-column-start: 6;
+    grid-column-end: 15;
+    grid-row-start: 5;
+}
+
+h1.profile-page:after {
+    content: "Hi, I'm Jen!";
+}
+
+h1.profile-page:hover:after {
+    content: "もしもし、わたしはジェン！";
+}
+
+div.profile-page {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    width: 100%;
+    height: 100%;
+}
+
+.header-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.header-cover.animation {
+    animation: reveal-header 600ms linear 1000ms forwards;
+}
+
+.header-cover.finished {
+    margin-left: 100%;
+}
+
+.me-container {
+    display: flex;
+    padding: var(--profile-page-padding);
+    margin: 0 auto;
+    align-self: end;
+    transform: translateY(-150%);
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+
+.me-container.animation {
+    animation: 800ms bounce ease-in forwards;
+}
+
+.me-container.finished {
+    transform: translateY(0);
+}
+
+#me {
+    border-radius: 10px;
+}
+
+.description {
+    grid-column-start: 2;
+    grid-column-end: 15;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    padding: var(--profile-page-padding);
+    font-weight: 400;
+    font-size: 1.1vw;
+    align-self: start;
+    text-align: justify;
+}
+
+.description > .show {
+    display: inline;
+}
+
+.description > .hide {
+    color: #fff;
+    display: inline;
+}
+
+.hr {
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    background: #000;
+}
+
+@keyframes reveal-header {
+    to {
+        margin-left: 100%;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-150%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-3%);
+    }
+    70% {
+        transform: translateY(0);
+    }
+    85% {
+        transform: translateY(-2%);
+    }
+    90% {
+        transform: translateY(0%);
+    }
+    92% {
+        transform: translateY(-0.5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 800px) {
+    header.profile-page { grid-column-start: 1; grid-row-start: 3; grid-row-end: 4; align-self: center; }
+    div.profile-page { grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(8, 1fr); }
+    .me-container { grid-column-start: 1; grid-row-start: 2; grid-row-end: 3; } 
+    .description { grid-column-start: 1; grid-row-start: 4; grid-row-end: 9; font-size: 2.3vw; }
+}
