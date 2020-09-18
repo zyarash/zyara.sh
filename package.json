@@ -4,14 +4,8 @@
   "description": "Zyara's Cool Website!~",
   "main": "main.js",
   "devDependencies": {
-    "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3"
   },
   "scripts": {
     "start-server": "nodemon main.js",
