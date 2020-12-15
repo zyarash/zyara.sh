@@ -11,11 +11,12 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3"
+    "react-scripts": "^3.4.3",
+    "react-transition-group": "^4.4.1"
   },
   "scripts": {
     "start-server": "nodemon main.js",
-    "start-client": "PORT=6969 react-scripts start",
+    "start-client": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },

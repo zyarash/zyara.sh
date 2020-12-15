@@ -1,0 +1,20 @@
+/***
+ * About.css
+ **/
+
+#content.about {
+    align-items: flex-end;
+}
+
+#content.about:before {
+}
+
+#portrait {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+.me {
+    background: red;
+}

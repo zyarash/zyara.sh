@@ -1,0 +1,194 @@
+/***
+ * Nav.css
+ **/
+
+:root {
+    --link-max-width: 600px;
+    --link-max-decrement: 80px;
+    --link-width: 60%;
+    --link-decrement: 8%;
+    --link-hover-increment: 10px;
+    --link-hover-margin-increment: 10px;
+}
+
+nav.default {
+    display: grid;
+    grid-template-rows: repeat(6, 30px);
+    width: 100vw;
+    align-items: center;
+}
+
+a.default {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+    align-items: center;
+    padding: 0px 30px;
+    font-size: 60%;
+    font-weight: bolder;
+    height: 25px;
+    transition: width 150ms, max-width 150ms, margin-bottom 100ms;
+    letter-spacing: 1px;
+    justify-self: flex-end;
+}
+
+a.default:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-right-color: black;
+    border-left: 0;
+    left: -12px;
+}
+
+a.default:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 5px;
+    height: 25px;
+}
+
+a.default:hover {
+    margin-bottom: var(--link-hover-margin-increment);
+}
+
+a.default.animate {
+    margin-left: -100%;
+}
+
+a.default.contact {
+    max-width: var(--link-max-width);
+    width: var(--link-width);
+    animation: default-grow 1500ms forwards 50ms;
+}
+
+a.default.contact.unanimate {
+    animation: reverse-default-grow 1500ms forwards 150ms;
+}
+
+a.default.contact:hover {
+    max-width: calc(var(--link-max-width) + var(--link-hover-increment));
+    width: calc(var(--link-width) + var(--link-hover-increment));
+}
+
+a.default.contact:before {
+    background: #ff8585;
+}
+
+a.default.resume {
+    max-width: calc(var(--link-max-width) - var(--link-max-decrement));;
+    width: calc(var(--link-width) - var(--link-decrement));
+    animation: default-grow 1500ms forwards 70ms;
+}
+a.default.resume.unanimate {
+    animation: reverse-default-grow 1500ms forwards 130ms;
+}
+
+a.default.resume:hover {
+    max-width: calc(calc(var(--link-max-width) - var(--link-max-decrement)) + var(--link-hover-increment));
+    width: calc(calc(var(--link-width) - var(--link-decrement)) + var(--link-hover-increment));
+}
+
+a.default.resume:before {
+    background: #fda372;
+}
+
+a.default.experiments {
+    max-width: calc(var(--link-max-width) - var(--link-max-decrement) * 2);;
+    width: calc(var(--link-width) - var(--link-decrement) * 2);
+    animation: default-grow 1500ms forwards 90ms;
+}
+
+a.default.experiments.unanimate {
+    animation: reverse-default-grow 1500ms forwards 110ms;
+}
+
+a.default.experiments:hover {
+    max-width: calc(calc(var(--link-max-width) - var(--link-max-decrement) * 2) + var(--link-hover-increment));
+    width: calc(calc(var(--link-width) - var(--link-decrement) * 2) + var(--link-hover-increment));
+}
+
+a.default.experiments:before {
+    background: #fef47e;
+}
+
+a.default.portfolio {
+    max-width: calc(var(--link-max-width) - var(--link-max-decrement) * 3);;
+    width: calc(var(--link-width) - var(--link-decrement) * 3);
+    animation: default-grow 1500ms forwards 110ms;
+}
+
+a.default.portfolio.unanimate {
+    animation: reverse-default-grow 1500ms forwards 90ms;
+}
+
+a.default.portfolio:hover {
+    max-width: calc(calc(var(--link-max-width) - var(--link-max-decrement) * 3) + var(--link-hover-increment));
+    width: calc(calc(var(--link-width) - var(--link-decrement) * 3) + var(--link-hover-increment));
+}
+
+a.default.portfolio:before {
+    background: #8bf99f;
+}
+
+a.default.about {
+    max-width: calc(var(--link-max-width) - var(--link-max-decrement) * 4);;
+    width: calc(var(--link-width) - var(--link-decrement) * 4);
+    animation: default-grow 1500ms forwards 130ms;
+}
+
+a.default.about.unanimate {
+    animation: reverse-default-grow 1500ms forwards 70ms;
+}
+
+a.default.about:hover {
+    max-width: calc(calc(var(--link-max-width) - var(--link-max-decrement) * 4) + var(--link-hover-increment));
+    width: calc(calc(var(--link-width) - var(--link-decrement) * 4) + var(--link-hover-increment));
+}
+
+a.default.about:before {
+    background: #6bbaff;
+}
+
+a.default.root {
+    max-width: calc(var(--link-max-width) - var(--link-max-decrement) * 5);;
+    width: calc(var(--link-width) - var(--link-decrement) * 5);
+    animation: default-grow 1500ms forwards 150ms;
+}
+
+a.default.root.unanimate {
+    animation: reverse-default-grow 1500ms forwards 50ms;
+}
+
+a.default.root:hover {
+    max-width: calc(calc(var(--link-max-width) - var(--link-max-decrement) * 5) + var(--link-hover-increment));
+    width: calc(calc(var(--link-width) - var(--link-decrement) * 5) + var(--link-hover-increment));
+}
+
+a.default.root:before {
+    background: #e699ff;
+}
+
+@keyframes default-grow {
+    0% {
+        margin-right: -100%;
+    }
+    100% {
+        margin-right: 0;
+    }
+}
+
+@keyframes reverse-default-grow {
+    0% {
+        margin-right: 0;
+    }
+    100% {
+        margin-right: -100%;
+    }
+}

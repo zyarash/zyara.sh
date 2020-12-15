@@ -1,0 +1,10 @@
+/***
+ * Resume.css
+ **/
+
+#content.resume {
+}
+
+#content.resume:before {
+    content: "Resume: Coming Soon!";
+}

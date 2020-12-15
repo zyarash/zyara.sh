@@ -1,205 +1,39 @@
 /***
- * Zyara's World!
- * もしもし  ٩(♡ε♡)۶
  * App.css
- */
+ **/
 
 @font-face {
-    font-family: irohamaru-mikami;
-    src: url("/irohamaru-mikami-Regular.ttf");
-    font-weight: 400;
+  font-family: PROXIMANOVA;
+  src: url("/ProximaNova-Regular.otf");
 }
 
 @font-face {
-    font-family: irohamaru-mikami;
-    src: url("/irohamaru-mikami-Light.ttf");
-    font-weight: 100;
+  font-family: MOTTERTEKTURA;
+  src: url("/Motter_Tektura_Normal.ttf");
 }
-
-@font-face {
-    font-family: irohamaru-mikami;
-    src: url("/irohamaru-mikami-Medium.ttf");
-    font-weight: 800;
-}
-
 
 * {
     margin: 0;
     padding: 0;
-    font-family: irohamaru-mikami, sans-serif;
+    font-family: "PROXIMANOVA", monospace;
     text-rendering: optimizeLegibility;
     user-select: none;
 }
 
-body, html{
-    height: 100%;
-    width: 100%;
+body, html, #root, #animation, #content {
+    display: flex;
+    width: 100vw;
+    min-height: 100%;
 }
 
-h1 {
-    font-size: 2.5vw;
-    font-weight: 800;
-    cursor: crosshair;
-    display: inline-flex;
-    width: 100%;
+body {
+    background: #fff;
 }
 
 #root {
-    display: grid;
-    grid-template-columns: 2fr 6fr 2fr;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
     align-items: center;
 }
 
-#content {
-    overflow: hidden;
-    position: relative;
-    display: grid;
-    width: 100%;
-    height: 70%;
-    justify-content: center;
-    align-items: center;
-    grid-column-start: 2;
-    margin: 0 auto;
-}
 
-.arrow {
-    display: flex;
-    font-size: 9vw;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    transition: font-size 100ms ease-in;
-}
-
-.arrow.left {
-    justify-self: right;
-    grid-column-start: 1;
-    grid-column-end: 1;
-}
-
-.arrow.right {
-    justify-self: left;
-    grid-column-start: 3;
-    grid-column-end: 3;
-}
-
-.arrow.left:after {
-    content: "❬";
-}
-
-.arrow.right:after {
-    content: "❭";
-}
-
-.arrow:hover {
-    font-size: 11vw;
-    cursor: pointer;
-}
-
-.arrow:active {
-    color: #666;
-}
-
-.left-page {
-    right: 100%;
-    left: -100%;
-}
-
-.right-page {
-    right: -100%;
-    left: 100%;
-}
-
-.left-page.animation {
-    animation: scroll-left-to-center 300ms linear forwards;
-}
-
-.right-page.animation {
-    animation: scroll-right-to-center 300ms linear forwards;
-}
-
-.center-page.animation-right {
-    animation: scroll-center-to-right 300ms linear forwards;
-}
-
-.center-page.animation-left {
-    animation: scroll-center-to-left 300ms linear forwards;
-}
-
-.info-header {
-    display: flex;
-}
-
-.info {
-    display: inline-flex;
-    font-size: 10px;
-    font-weight: bold;
-    align-self: flex-end;
-    margin: 5px;
-}
-
-.info:after {
-    margin: 0 auto;
-    text-align: center;
-    content: "?";
-    width: 14px;
-    height: 14px;
-    border-radius: 100%;
-    border: 2px solid #666;
-    color: #666;
-    cursor: pointer;
-}
-
-
-@media (max-width: 800px) {
-    header { text-align: center; }
-    h1 { display: flex; justify-content: center; align-items: center; }
-    .info-header > h1 { margin-left: 24px; }
-}
-
-@keyframes scroll-left-to-center {
-    from {
-        right: 100%;
-        left: -100%;
-    }
-    to {
-        left: 0%;
-        right: 0%;
-    }
-}
-
-@keyframes scroll-center-to-right {
-    from {
-        left: 0%;
-        right: 0%;
-    }
-    to {
-        right: -100%;
-        left: 100%;
-    }
-}
-
-@keyframes scroll-right-to-center {
-    from {
-        right: -100%;
-        left: 100%;
-    }
-    to {
-        left: 0%;
-        right: 0%;
-    }
-}
-
-@keyframes scroll-center-to-left {
-    from {
-        left: 0%;
-        right: 0%;
-    }
-    to {
-        right: 100%;
-        left: -100%;
-    }
+@media (max-width: 600px) {
 }

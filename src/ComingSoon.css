@@ -1,0 +1,63 @@
+#content.coming-soon {
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    animation: coming-soon-change-content-background 2000ms forwards;
+    flex-flow: column;
+}
+
+header.coming-soon {
+    font-size: clamp(20px, 10vw, 50px);
+    text-align: center;
+}
+
+header.coming-soon:before {
+    width: 0;
+    height: 0;
+}
+
+.coming-soon.logo {
+    background-image: linear-gradient(
+        90deg,
+        #ff8585 16.666%,
+        #fda372 16.666%,
+        #fda372 33.333%,
+        #fef47e 33.333%,
+        #fef47e 50%,
+        #8bf99f 50%,
+        #8bf99f 66.666%,
+        #6bbaff 66.666%,
+        #6bbaff 83.333%,
+        #e699ff 83.333%,
+        #e699ff 50%
+    );
+    max-width: 30vw;
+    width: 100%;
+    min-width: 270px;
+    height: 10px;
+    animation: coming-soon-change-logo 2000ms forwards;
+    margin-left: -200vw;
+}
+
+.coming-soon.logo:after {
+    content: "coming soon";
+    font-family: MOTTERTEKTURA, monospace;
+    margin-top: 10px;
+    position: absolute;
+    font-size: 10px;
+}
+
+@keyframes coming-soon-change-content-background {
+    0% {
+        background: #000;
+    }
+    100% {
+        background: #fff;
+    }
+}
+
+@keyframes coming-soon-change-logo {
+    100% {
+        margin-left: 0;
+    }
+}

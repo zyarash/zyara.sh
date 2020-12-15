@@ -1,0 +1,10 @@
+/***
+ * Contact.css
+ **/
+
+#content.contact {
+}
+
+#content.contact:before {
+    content: "Contact: Coming Soon!";
+}

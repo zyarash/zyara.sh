@@ -1,8 +1,6 @@
 /***
- * Zyara's World!
- * もしもし  ٩(♡ε♡)۶
  * main.js
- */
+ **/
 
 const express = require("express")
 const path = require("path")

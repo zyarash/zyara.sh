@@ -1,8 +1,6 @@
 /***
- * Zyara's World!
- * もしもし  ٩(♡ε♡)۶
  * PROJECTS.js
- */
+ **/
 
 function Project(name, longName, link, desc) {
   this.name = name;
